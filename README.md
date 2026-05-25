@@ -77,19 +77,19 @@ Cleanup & Reporting
 
 ---
 
-🔄 Pipeline Stages
-1️⃣ Git Checkout
+##🔄 Pipeline Stages
+###1️⃣ Git Checkout
 Jenkins pulls the latest source code from the GitHub repository to ensure the build uses the most recent updates.
 
-2️⃣ Unit Testing
+###2️⃣ Unit Testing
 Maven executes automated unit tests to validate application functionality before moving forward.
 
 Tools Used: Maven, JUnit
 
-3️⃣ Integration Testing
+###3️⃣ Integration Testing
 Integration tests are executed as part of the CI workflow to ensure different modules work together seamlessly.
 
-4️⃣ Static Code Analysis (SonarQube)
+###4️⃣ Static Code Analysis (SonarQube)
 SonarQube performs deep code quality and security analysis.
 
 Validations Performed:
