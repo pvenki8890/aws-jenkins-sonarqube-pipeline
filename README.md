@@ -79,56 +79,47 @@ Cleanup & Reporting
 
 🔄 Pipeline Stages
 1️⃣ Git Checkout
-
-Jenkins pulls the latest source code from the GitHub repository.
+Jenkins pulls the latest source code from the GitHub repository to ensure the build uses the most recent updates.
 
 2️⃣ Unit Testing
+Maven executes automated unit tests to validate application functionality before moving forward.
 
-Maven executes automated unit tests to validate application functionality.
+Tools Used: Maven, JUnit
 
-Tools Used
-• Maven
-• JUnit
 3️⃣ Integration Testing
+Integration tests are executed as part of the CI workflow to ensure different modules work together seamlessly.
 
-Integration tests are executed as part of the CI workflow.
+4️⃣ Static Code Analysis (SonarQube)
+SonarQube performs deep code quality and security analysis.
 
-4️⃣ Static Code Analysis - SonarQube
+Validations Performed:
 
-SonarQube performs code quality and security analysis.
+🐛 Bugs Detection
 
-Validations Performed
-• Bugs Detection
-• Vulnerabilities
-• Code Smells
-• Maintainability Analysis
-• Security Hotspots
+🔒 Vulnerabilities & Security Hotspots
+
+🧄 Code Smells
+
+📈 Maintainability Analysis
+
 5️⃣ Maven Build & Packaging
-
-Application is packaged into an executable JAR file using Maven.
+The Spring Boot application is compiled and packaged into a production-ready, executable JAR file using Maven.
 
 6️⃣ Docker Image Build
+The application is containerized using Docker to ensure environment consistency.
 
-The Spring Boot application is containerized using Docker.
+Key Benefits: Lightweight container images, highly portable deployment, and consistent runtime environments.
 
-Docker Features
-• Lightweight container image
-• Portable deployment
-• Consistent runtime environment
 7️⃣ Trivy Vulnerability Scanning
+Trivy scans the generated Docker image to enforce DevSecOps security guardrails.
 
-Trivy scans the Docker image for:
+Scans For: Critical Vulnerabilities, High Severity CVEs, and OS/Package Misconfigurations.
 
-• Critical Vulnerabilities
-• High Severity CVEs
-• Misconfigurations
 8️⃣ DockerHub Push
+Successfully validated and secure Docker images are pushed directly to DockerHub for deployment readiness.
 
-Successfully validated Docker images are pushed securely to DockerHub.
-
-9️⃣ Docker Cleanup
-
-Local Docker images and temporary resources are cleaned up after execution.
+9️⃣ Docker Cleanup & Reporting
+Local Docker images and temporary build resources are scrubbed from the Jenkins agent to optimize storage, followed by final pipeline reporting.
 
 🔧 Jenkins Integrations
 ✅ SonarQube Integration
