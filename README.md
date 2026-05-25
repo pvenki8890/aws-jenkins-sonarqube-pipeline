@@ -74,7 +74,6 @@ Trivy Security Scan
 DockerHub Push
         ↓
 Cleanup & Reporting
-
 🔄 Pipeline Stages
 1️⃣ Git Checkout
 
